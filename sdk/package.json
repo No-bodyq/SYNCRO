@@ -39,7 +39,7 @@
   "scripts": {
     "lint": "eslint \"src/**/*.ts\"",
     "typecheck": "tsc --noEmit",
-    "build": "tsc",
+    "build": "node init && tsc",
     "test": "jest",
     "prepublishOnly": "npm run lint && npm run typecheck && npm run build"
   },

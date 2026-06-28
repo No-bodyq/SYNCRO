@@ -8,10 +8,10 @@
   "type": "commonjs",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "node init && tsc",
     "typecheck": "tsc --noEmit",
-    "start": "node dist/index.js",
-    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "start": "node init && node dist/index.js",
+    "dev": "node init && ts-node-dev --respawn --transpile-only src/index.ts",
     "validate-env": "node scripts/validate-env.js",
     "test": "jest",
     "test:migrations": "jest migration-drift.test.ts",
